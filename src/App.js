@@ -5,30 +5,36 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  constructor(props) {
-    super(props);
-    const [contacts, setContacts] = useState([]); 
-    const [appointments, setAppointments] = useState([]);
-  }
+  const [contacts, setContacts] = useState([{name: 'Tina', phone: '123-123-1234', email: 'tina@bobs.com'}, {name: 'Louise', phone:'123-1234-1235', email:'louise@bobs.com'}]); 
+  const [appointments, setAppointments] = useState([
+    {
+      title: 'Feed cat', 
+      date:'08/26/2021', 
+      time:'07:00 AM', 
+      contact: 'Louise'
+    }, {
+      title: 'Feed dog', 
+      date:'08/26/2021', 
+      time:'07:00 AM', 
+      contact: 'Tina'
+    }]);
 
   const addContact = (name, phone, email) => {
-    const newContact = {
+    setContacts([...contacts, {
       name: name, 
       phone: phone, 
       email: email
-    };
-    setContacts(prev => [newContact, ...prev]);
-  }
+    }]);
+  };
 
   const addAppointment = (title, contact, date, time) => {
-    const newAppointment = {
+    setAppointments([...appointments, {
       title: title, 
       contact: contact, 
       date: date, 
       time: time
-    };
-    setAppointments(prev => [newAppointment, ...prev]);
-  }
+    }]);
+  };
 
   const ROUTES = {
     CONTACTS: "/contacts",
@@ -58,6 +64,7 @@ function App() {
           <Route path={ROUTES.APPOINTMENTS}>
             <AppointmentsPage
               appointments={appointments}
+              contacts={contacts}
               addAppointment={addAppointment} />
           </Route>
         </Switch>
