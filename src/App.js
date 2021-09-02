@@ -5,19 +5,8 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  const [contacts, setContacts] = useState([{name: 'Tina', phone: '123-123-1234', email: 'tina@bobs.com'}, {name: 'Louise', phone:'123-1234-1235', email:'louise@bobs.com'}]); 
-  const [appointments, setAppointments] = useState([
-    {
-      title: 'Feed cat', 
-      date:'08/26/2021', 
-      time:'07:00 AM', 
-      contact: 'Louise'
-    }, {
-      title: 'Feed dog', 
-      date:'08/26/2021', 
-      time:'07:00 AM', 
-      contact: 'Tina'
-    }]);
+  const [contacts, setContacts] = useState([]); 
+  const [appointments, setAppointments] = useState([]);
 
   const addContact = (name, phone, email) => {
     setContacts([...contacts, {
