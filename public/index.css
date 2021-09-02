@@ -1,15 +1,27 @@
+@font-face {
+  font-family: "Carneys Gallery";
+  src: url('./fonts/carneys_gallery/Carneys_Gallery.otf')  format('truetype');
+}
+
 #root {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color:  wheat;
+  color: navy;
+}
+
 nav > a {
+  font-family: "Carneys Gallery", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  color: #000000;
+  font-size: 24px;
   margin-right: 30.5px;
   text-decoration-line: none;
+  padding: 6px;
+  color: navy;
 }
 
 nav > a.active {
@@ -18,19 +30,16 @@ nav > a.active {
 
 nav {
   padding-bottom: 20px;
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid navy;
   margin-bottom: 20px;
 }
 
 h2 {
+  font-family: "Carneys Gallery", serif;
   font-weight: bold;
   font-size: 18px;
-  color: #000000;
   margin: 0;
   margin-bottom: 18px;
-}
-
-section {
 }
 
 hr {
@@ -40,9 +49,9 @@ hr {
 }
 
 input[type="submit"] {
-  background: #03a8d8;
+  background: rgb(226, 151, 11);
   border-radius: 4px;
-  color: #ffffff;
+  color: navy;
   font-weight: bold;
   font-size: 14px;
   border: none;
@@ -73,8 +82,10 @@ select {
   margin-bottom: 4px;
 }
 
-.tile.tile-title {
+.tile-title {
   font-weight: bold;
+  font-family: "Carneys Gallery", serif;
+  margin: 10px 0 5px 0;
 }
 
 .tile-container {
