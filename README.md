@@ -2,7 +2,9 @@
 
 React frontend planner application for creating contact cards and appointments.
 
-View live site [here](https://flashcards-react.netlify.app)!
+View live site [here](https://crk-planner.netlify.app/contacts)!
+
+[![Screenshot of Planner application landing page](./public/screenshot.png)](https://crk-planner.netlify.app/contacts)
 
 ## Table of Contents 
 * [Introduction](#introduction)
@@ -32,9 +34,9 @@ This project was a learning exercise in building front-end React applications.
 
 ## Set Up
 
-Live site hosted at [carokrny.github.io/planner](https://carokrny.github.io/planner/).
+Live site hosted on [Netlify](https://crk-planner.netlify.app/contacts).
 
-Or, install locally and run `npm start` in the project root and the app will be available on port 3000.
+Or, install locally and run `npm install` then `npm start` in the project root and the app will be available on port 3000.
 
 ## Documentation
 
